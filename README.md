@@ -9,7 +9,7 @@
 - Socket.io
 
 ### Implemented bonus functionality:
-- Visual effects to highlight positive or negative changes in the prices
+- Visual effects for highlighting positive or negative changes in the prices
 - Input field for searching specific ticker
 
 ### How to start:
