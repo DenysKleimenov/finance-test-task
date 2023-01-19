@@ -11,7 +11,7 @@ type Props = {
   tickerData: TickerType;
 };
 
-const convertTickerName = (tickerName: string) => {
+export const convertTickerName = (tickerName: string) => {
   switch (tickerName) {
     case 'AAPL':
       return 'Apple';
@@ -43,13 +43,16 @@ export const Ticker: React.FC<Props> = ({ tickerData }) => {
   return (
     <div className="ticker">
       <span className="ticker__name">{ticker}</span>
-      <span className="company-name">{companyName}</span>
+      <span className="company-name">
+        {companyName}
+      </span>
       <span className="ticker__price">{`$${price}`}</span>
       <span
         className={cn({
           'positive-change': currentPriceIsGreater,
           'negative-change': currentPriceIsLess,
         })}
+        data-cy="change"
       >
         {`$${change}`}
       </span>
