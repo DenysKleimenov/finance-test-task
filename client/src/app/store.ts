@@ -1,7 +1,7 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import tickersListReducer from '../features/tickersList';
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     tickers: tickersListReducer,
   },
@@ -9,7 +9,6 @@ const store = configureStore({
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
-
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
   RootState,
