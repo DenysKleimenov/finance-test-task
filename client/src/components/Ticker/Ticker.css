@@ -1,0 +1,57 @@
+.ticker {
+  border: 1px solid #e7eaf6;
+  border-left: 0;
+  border-right: 0 ;
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto';
+  /* width: 400px; */
+}
+
+.ticker:hover {
+  background-color: #f8f9fa;
+}
+
+.ticker__name {
+  background-color: #0092ca;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10%;
+}
+
+.company-name {
+  font-weight: 300;
+}
+
+.positive-change {
+  color: #2e9d6b;
+}
+
+.positive-change::before {
+  content: '+';
+}
+
+.negative-change {
+  color: #e31212;
+}
+
+.negative-change::before {
+  content: '-';
+}
+
+.change-percent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.change-percent::before {
+  content: '';
+}
+
+.add-icon {
+  cursor: pointer;
+}
